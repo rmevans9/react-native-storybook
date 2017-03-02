@@ -30,6 +30,6 @@ server.listen(...listenAddr, function (err) {
 // RN packager
 shelljs.exec([
   'node node_modules/react-native/local-cli/cli.js start',
-  `--projectRoots ${configDir}`,
+  `--projectRoots ${configDir},${projectDir}`,
   `--root ${projectDir}`,
 ].join(' '), {async: true});
